@@ -14,6 +14,7 @@ class Foto():
     @ancho.setter
     def ancho(self, ancho) -> None:
         if ancho < 1 or ancho > self.MAX:
+            #raise DimensionError(mensaje="El nuevo ancho está fuera de rango.")
             raise DimensionError(mensaje="El nuevo ancho está fuera de rango.",dimension=ancho,maximo=self.MAX)
         else:
             self.__ancho = ancho
@@ -34,4 +35,4 @@ class Foto():
 if __name__ == "__main__":
     f = Foto(200,200,"ruta")
     #f.alto=0
-    #f.ancho = 2501
+    f.ancho = 2501
