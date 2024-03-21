@@ -5,7 +5,7 @@ class DimensionError(Exception):
         self.maximo = maximo
     def __str__(self):
         if(self.dimension is None and self.maximo is None):
-            return super.__str__(self.mensaje)
+            return super.__str__()
         else:
             mensaje_retorno = f"Mensaje: {self.mensaje}"
             if self.dimension is not None:
